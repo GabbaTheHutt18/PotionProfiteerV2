@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000059604645, y: 0.19898015}
+  m_Offset: {x: 0.58898795, y: 0.14743716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,7 +197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.070901, y: 1.3979605}
+  m_Size: {x: 2.0948632, y: 2.7086434}
   m_EdgeRadius: 0
 --- !u!4 &34052638
 Transform:
@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 34052635}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0056, y: 3.44, z: 0}
+  m_LocalPosition: {x: -16.17, y: 12.97, z: 0}
   m_LocalScale: {x: 1.8711, y: 1.4254, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42858,11 +42858,11 @@ PrefabInstance:
     - target: {fileID: 555214363906615799, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: epic
       value: 
-      objectReference: {fileID: 339801389866101133, guid: 9a9f92f688a2308498677613994b07b0, type: 3}
+      objectReference: {fileID: 339801389866101133, guid: 0b86c11122320d345a4c69f0b49f2398, type: 3}
     - target: {fileID: 555214363906615799, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: rare
       value: 
-      objectReference: {fileID: 339801389866101133, guid: 340bc532a86fcca448d71df35e2f8bc9, type: 3}
+      objectReference: {fileID: 339801389866101133, guid: 94f6bb9d070df424998406e07ea877f9, type: 3}
     - target: {fileID: 555214363906615799, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: x_min
       value: -21
@@ -42878,11 +42878,11 @@ PrefabInstance:
     - target: {fileID: 555214363906615799, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: common
       value: 
-      objectReference: {fileID: 339801389866101133, guid: d0cee1523f765264b9a812e783d4f416, type: 3}
+      objectReference: {fileID: 339801389866101133, guid: a85fd69c10ad93f43989038cc3a95898, type: 3}
     - target: {fileID: 555214363906615799, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: legendary
       value: 
-      objectReference: {fileID: 339801389866101133, guid: 290cfa47e87bb4441b7f1e68fc1d2a2f, type: 3}
+      objectReference: {fileID: 339801389866101133, guid: 3b848516f207c974296fb3c95c49d9ac, type: 3}
     - target: {fileID: 4405588375681358325, guid: bba4f2eb327c5aa44a75abcd347ef06c, type: 3}
       propertyPath: m_Name
       value: Resource Spawner

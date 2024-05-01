@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ff0fc7adeee974397084f197738a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: herbPlant
+  id: cavePlant
   displayName: Blush Mush
   icon: {fileID: 21300000, guid: 8c956eaf5bf481e4083b0672bc6d0c47, type: 3}
