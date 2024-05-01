@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ff0fc7adeee974397084f197738a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: herbMineral
-  displayName: Crystal
+  id: herbLiquid
+  displayName: Sap
   icon: {fileID: 21300000, guid: 7fd1afed5229ce24eb559c59d342a02c, type: 3}

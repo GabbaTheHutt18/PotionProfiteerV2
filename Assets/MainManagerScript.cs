@@ -11,27 +11,28 @@ public class MainManagerScript : MonoBehaviour
     public AudioClip AudioClip1;
     public AudioClip AudioClip2;
     public AudioClip AudioClip3;
+    public AudioClip Ring;
     List<AudioClip> AudioClipList = new List<AudioClip>();
     public Dictionary<string, int> ResourceInventory = new Dictionary<string, int> {
-        ["firePlant"] = 2,
+        ["firePlant"] = 10,
         ["herbPlant"] = 2,
-        ["icePlant"] = 2,
+        ["icePlant"] = 10,
         ["cavePlant"] = 2,
-        ["fireSeeds"] = 2,
+        ["fireSeeds"] = 10,
         ["herbSeeds"] = 2,
-        ["iceSeeds"] = 2,
+        ["iceSeeds"] = 10,
         ["caveSeeds"] = 2,
-        ["fireLiquid"] = 2,
+        ["fireLiquid"] = 10,
         ["herbLiquid"] = 2,
-        ["iceLiquid"] = 2,
+        ["iceLiquid"] = 10,
         ["caveLiquid"] = 2,
-        ["fireMineral"] = 2,
+        ["fireMineral"] = 10,
         ["herbMineral"] = 2,
-        ["iceMineral"] = 2,
+        ["iceMineral"] = 10,
         ["caveMineral"] = 2,
-        ["fireAnimal"] = 2,
+        ["fireAnimal"] = 10,
         ["herbAnimal"] = 2,
-        ["iceAnimal"] = 2,
+        ["iceAnimal"] = 10,
         ["caveAnimal"] = 2,
     };
     public Dictionary<int, int> PlantedSeeds = new Dictionary<int, int> {
@@ -109,7 +110,7 @@ public class MainManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 2 || SceneManager.GetActiveScene().buildIndex == 3)
         {
             explored = true;
         }
@@ -122,6 +123,10 @@ public class MainManagerScript : MonoBehaviour
         {
             int randomAudio = Random.Range(0, AudioClipList.Count);
             AudioSource.PlayOneShot(AudioClipList[randomAudio]);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            AudioSource.PlayOneShot(Ring);
         }
     }
 

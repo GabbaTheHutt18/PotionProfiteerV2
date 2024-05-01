@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ff0fc7adeee974397084f197738a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: herbLiquid
+  id: herbMineral
   displayName: Living Herb
   icon: {fileID: 21300000, guid: 882db764ee4f8954fa4e0f2006d3b589, type: 3}

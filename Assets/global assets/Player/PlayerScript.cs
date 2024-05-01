@@ -15,7 +15,6 @@ public class PlayerScript : MonoBehaviour
     public GameObject PopUpBox;
     public Canvas Canvas;
 
-
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>(); // Gets reference to rigidbody component
@@ -61,6 +60,7 @@ public class PlayerScript : MonoBehaviour
         {
             animator.SetFloat("multiplier", 0);
         }
+        
     }
     void Update()
     {
