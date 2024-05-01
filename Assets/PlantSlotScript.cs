@@ -20,39 +20,49 @@ public class PlantSlotScript : MonoBehaviour, IDropHandler
     // Update is called once per frame
     void Update()
     {
-
+        string Plant = "";
         switch (PlantType)
         {
             case 0:
-                if (mainManagerScript.ResourceInventory["firePlant"]  >= 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["firePlant"] > transform.childCount && transform.childCount < 1)
                 {
                     SpawnPlants();
+                    
                 }
+                Plant = "firePlant";
                 break;
             case 1:
-                if (mainManagerScript.ResourceInventory["herbPlant"] >= 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["herbPlant"] > transform.childCount && transform.childCount < 1)
                 {
                     SpawnPlants();
+                    
                 }
+                Plant = "herbPlant";
+                
                 break;
             case 2:
-                if (mainManagerScript.ResourceInventory["icePlant"] >= 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["icePlant"] > transform.childCount && transform.childCount < 1)
                 {
                     SpawnPlants();
+                    Plant = "icePlant";
                 }
+                Plant = "icePlant";
                 break;
             case 3:
-                if (mainManagerScript.ResourceInventory["cavePlant"] >= 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["cavePlant"] > transform.childCount && transform.childCount < 1)
                 {
                     SpawnPlants();
+                    
+
                 }
+                Plant = "cavePlant";
                 break;
             default:
                 break;
         }
-        if (transform.childCount > 1)
+        if (transform.childCount > 1 || transform.childCount > mainManagerScript.ResourceInventory[Plant])
         {
-            Destroy(transform.GetChild(1).gameObject);
+            Destroy(transform.GetChild(0).gameObject);
         }
         
     }
@@ -71,28 +81,6 @@ public class PlantSlotScript : MonoBehaviour, IDropHandler
             GameObject dropped = eventData.pointerDrag;
             PlantScript Plant = dropped.GetComponent<PlantScript>();
             Plant.ParentAfterDrag = transform;
-            Debug.Log(Plant.PlantType);
-            Debug.Log(mainManagerScript.ResourceInventory["herbPlant"]);
-            switch (Plant.PlantType)
-            {
-                case 0:
-                    mainManagerScript.ResourceInventory["firePlant"] += 1;
-                    break;
-                case 1:
-                    mainManagerScript.ResourceInventory["herbPlant"] += 1;
-                    Debug.Log(mainManagerScript.ResourceInventory["herbPlant"]);
-                    break;
-                case 2:
-                    mainManagerScript.ResourceInventory["icePlant"] += 1;
-                    break;
-                case 3:
-                    mainManagerScript.ResourceInventory["cavePLant"] += 1;
-                    break;
-                default:
-                    break;
-            }
-
-
 
         }
 

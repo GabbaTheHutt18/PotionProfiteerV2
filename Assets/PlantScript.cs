@@ -66,15 +66,19 @@ public class PlantScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             case 0:
                 mainManagerScript.ResourceInventory["fireSeeds"] += 3;
+                mainManagerScript.ResourceInventory["firePlant"] -= 1;
                 break;
             case 1:
                 mainManagerScript.ResourceInventory["herbSeeds"] += 3;
+                mainManagerScript.ResourceInventory["herbPlant"] -= 1;
                 break;
             case 2:
                 mainManagerScript.ResourceInventory["iceSeeds"] += 3;
+                mainManagerScript.ResourceInventory["icePlant"] -= 1;
                 break;
             case 3:
                 mainManagerScript.ResourceInventory["caveSeeds"] += 3;
+                mainManagerScript.ResourceInventory["cavePlant"] -= 1;
                 break;
             default:
                 break;
@@ -110,6 +114,29 @@ public class PlantScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         image.raycastTarget = true;
         
 
+
+    }
+
+    public void FailedMash()
+    {
+        switch (PlantType)
+        {
+            case 0:
+                mainManagerScript.ResourceInventory["firePlant"] -= 1;
+                break;
+            case 1:
+                mainManagerScript.ResourceInventory["herbPlant"] -= 1;
+                break;
+            case 2:
+                mainManagerScript.ResourceInventory["icePlant"] -= 1;
+                break;
+            case 3:
+                mainManagerScript.ResourceInventory["cavePlant"] -= 1;
+                break;
+            default:
+                break;
+        }
+        Destroy(gameObject);
     }
 
 }

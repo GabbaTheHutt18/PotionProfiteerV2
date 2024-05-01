@@ -44,7 +44,7 @@ public class GrindStoneScript : MonoBehaviour, IDropHandler
             if (mash <= 0)
             {
                 GameObject crushed = transform.GetChild(0).gameObject;
-                Destroy(crushed);
+                crushed.GetComponent<PlantScript>().FailedMash();
                 started = false;
                 mash = mashDelay;
                 ButtonText.text = "Begin";
@@ -71,23 +71,7 @@ public class GrindStoneScript : MonoBehaviour, IDropHandler
             dropped = eventData.pointerDrag;
             DragDrop = dropped.GetComponent<PlantScript>();
             DragDrop.ParentAfterDrag = transform;
-            switch (DragDrop.PlantType)
-            {
-                case 0:
-                    DragDrop.mainManagerScript.ResourceInventory["firePlant"] -= 1;
-                    break;
-                case 1:
-                    DragDrop.mainManagerScript.ResourceInventory["herbPlant"] -= 1;
-                    break;
-                case 2:
-                    DragDrop.mainManagerScript.ResourceInventory["icePlant"] -= 1;
-                    break;
-                case 3:
-                    DragDrop.mainManagerScript.ResourceInventory["cavePlant"] -= 1;
-                    break;
-                default:
-                    break;
-            }
+            
         }
 
     }
