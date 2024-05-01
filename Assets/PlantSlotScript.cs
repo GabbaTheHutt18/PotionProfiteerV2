@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Debug = UnityEngine.Debug;
 
 public class PlantSlotScript : MonoBehaviour, IDropHandler
 {
@@ -22,25 +24,25 @@ public class PlantSlotScript : MonoBehaviour, IDropHandler
         switch (PlantType)
         {
             case 0:
-                if (mainManagerScript.ResourceInventory["firePlant"]  > 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["firePlant"]  >= 1 && transform.childCount < 1)
                 {
                     SpawnPlants();
                 }
                 break;
             case 1:
-                if (mainManagerScript.ResourceInventory["herbPlant"] > 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["herbPlant"] >= 1 && transform.childCount < 1)
                 {
                     SpawnPlants();
                 }
                 break;
             case 2:
-                if (mainManagerScript.ResourceInventory["icePlant"] > 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["icePlant"] >= 1 && transform.childCount < 1)
                 {
                     SpawnPlants();
                 }
                 break;
             case 3:
-                if (mainManagerScript.ResourceInventory["cavePlant"] > 1 && transform.childCount < 1)
+                if (mainManagerScript.ResourceInventory["cavePlant"] >= 1 && transform.childCount < 1)
                 {
                     SpawnPlants();
                 }
@@ -66,14 +68,30 @@ public class PlantSlotScript : MonoBehaviour, IDropHandler
     {
         if (eventData != null)
         {
-            if (transform.childCount == 0)
+            GameObject dropped = eventData.pointerDrag;
+            PlantScript Plant = dropped.GetComponent<PlantScript>();
+            Plant.ParentAfterDrag = transform;
+            Debug.Log(Plant.PlantType);
+            Debug.Log(mainManagerScript.ResourceInventory["herbPlant"]);
+            switch (Plant.PlantType)
             {
-
-                GameObject dropped = eventData.pointerDrag;
-                PotionScript Plant = dropped.GetComponent<PotionScript>();
-                Plant.ParentAfterDrag = transform;
+                case 0:
+                    mainManagerScript.ResourceInventory["firePlant"] += 1;
+                    break;
+                case 1:
+                    mainManagerScript.ResourceInventory["herbPlant"] += 1;
+                    Debug.Log(mainManagerScript.ResourceInventory["herbPlant"]);
+                    break;
+                case 2:
+                    mainManagerScript.ResourceInventory["icePlant"] += 1;
+                    break;
+                case 3:
+                    mainManagerScript.ResourceInventory["cavePLant"] += 1;
+                    break;
+                default:
+                    break;
             }
-            
+
 
 
         }

@@ -95,6 +95,7 @@ public class PlantScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        
 
         //text.SetActive(false);
     }

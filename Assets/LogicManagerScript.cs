@@ -11,7 +11,7 @@ public class LogicManagerScript : MonoBehaviour
     NPC_Script NPC_Script;
     bool WantToBarter = true;
     public int Price = 0;
-    public int Coin = 0;
+    public int Coin;
     public Potion SelectedPotion;
     public TMP_Text Offer;
     public TMP_Text Dialog;
@@ -24,6 +24,7 @@ public class LogicManagerScript : MonoBehaviour
         GameObject _npc = Instantiate(NPC, position, transform.rotation);
         NPC_Script = _npc.GetComponent<NPC_Script>();
         mainManagerScript = GameObject.FindGameObjectWithTag("Manager").GetComponent<MainManagerScript>();
+        Coin = mainManagerScript.Coin;
         Potions = mainManagerScript.Potions;
         CoinText.text = "Coin: " + Coin;
         
