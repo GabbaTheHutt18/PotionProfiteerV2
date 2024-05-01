@@ -194,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312775683}
   - component: {fileID: 312775682}
+  - component: {fileID: 312775684}
   m_Layer: 0
   m_Name: QuestboardWidget
   m_TagString: Untagged
@@ -262,12 +263,57 @@ Transform:
   m_GameObject: {fileID: 312775681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.79, y: 2.01, z: -1}
+  m_LocalPosition: {x: 2.86, y: 2.14, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &312775684
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312775681}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.3}
+    newSize: {x: 2, y: 1.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.3}
+  m_EdgeRadius: 0
 --- !u!1 &369331696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,11 +2772,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.92
+      value: 5.15
       objectReference: {fileID: 0}
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.27
+      value: -7.83
       objectReference: {fileID: 0}
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4338,6 +4384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640793585}
   - component: {fileID: 640793584}
+  - component: {fileID: 640793586}
   m_Layer: 0
   m_Name: Seeds
   m_TagString: Untagged
@@ -4406,12 +4453,57 @@ Transform:
   m_GameObject: {fileID: 640793583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.33, y: -3.7, z: 0}
+  m_LocalPosition: {x: 6.93, y: -4.14, z: -1}
   m_LocalScale: {x: 1.4686, y: 1.4686, z: 1.4686}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &640793586
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640793583}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.3}
+    newSize: {x: 2, y: 1.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.3}
+  m_EdgeRadius: 0
 --- !u!1 &740362968
 GameObject:
   m_ObjectHideFlags: 0
@@ -4552,11 +4644,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.24
+      value: 6.71
       objectReference: {fileID: 0}
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.71
+      value: -4.96
       objectReference: {fileID: 0}
     - target: {fileID: 1442920615923584189, guid: cb2c614dd87461f499f24ea065ddb8be, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4792,6 +4884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1736856463}
   - component: {fileID: 1736856462}
+  - component: {fileID: 1736856464}
   m_Layer: 0
   m_Name: Pestle&MortarIcon
   m_TagString: Untagged
@@ -4866,6 +4959,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1736856464
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736856461}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.3}
+    newSize: {x: 2, y: 1.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!1001 &1866554683
 PrefabInstance:
   m_ObjectHideFlags: 0
